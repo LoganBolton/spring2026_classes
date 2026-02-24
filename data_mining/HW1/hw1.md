@@ -1,3 +1,6 @@
+Logan Bolton
+COMP 5130
+
 # 1
 a) What is Data Mining ?
 
@@ -6,13 +9,13 @@ Datamining is the process of using statistics and machine learning to unconver n
 
 b) Explain knowledge discovery steps in a Framework like Web Mining?
 
-Web mining requires you to clean and aggregate the data in a warehouse. Then, the data cube is constructed and the specific data is selected for mining. Finally afte mining, the results are presented.
+Web mining requires you to clean and aggregate the data in a warehouse. Then, the data cube is constructed and the specific data is selected for mining. Finally after mining, the results are presented.
 
 c) Write the Data Preprocessing, Data Mining and Data Post Processing inclusive
 processes in a knowledge discovery process from Machine Learning and Statistics
 approach?
 
-Data preprocessing involves normalization, feature selection and dimension selection. 
+Data preprocessing involves normalization, feature selection and dimension reduction. 
 Data mining involves using methods like clustering and classification on the selceted data. 
 Finally, data post processing involves visualizing and inteprerting the patterns that have been discovered.
 
@@ -24,7 +27,10 @@ of them ?
 2) Association and correlation analysis: Determining if two pieces of data are strongly correlated. 
 3) Classification: Detecting credit card fraud among legitimate transactions.
 4) Cluster analysis: Performing unsupervised learning to categorize the data without explicit labels.
-5) 
+5) Outlier Analysis: Finding data that does look like typical data such as in fraud detection.
+
 
 # 3
 Explain the difference between noise and outlier
+
+Noise is the result of random processes that are not the result of any true function. An outliar is a statisticallly improbable piece of data that lies outside the typical expected range of values. Noise is typically not useful, but outliars can be. 
