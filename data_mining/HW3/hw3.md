@@ -1,14 +1,25 @@
 # Q1
 1. What is a Data Warehouse? Please list 3 kind of applications of the Data Warehouse method
 
+A datawarehouse is a centralized collection of data from various sources. It can be used for things like creating dashboards that describe the current state of a business, analyzing the behaviors of customers or forceasting future trends of what the business related data could look like.
+
 2. List and explain 3 schemas of data Warehouses.
 
+I'm assuming that by schemas, you are referring to the "three data warehouse models" listed in the notes. The three data warehouse models are enterprise warehouse, data mart, and virtual warehouse. An enterprise warehouse stores integrated data for the whole organization, a data mart stores a smaller subset for a specific department or group of users, and a virtual warehouse provides access through views over operational databases without fully storing all data physically.
 
 # Q2
 
 1. List and explain at least 4 typical OLAP operations.
 
+Some typical OLAP operations would be things like summarizing data, looking at more detailed data, focusing on one category, and comparing data across multiple conditions. For example, this could mean looking at total sales by year, then breaking it down by month, viewing data for only one region or customer group, or comparing sales for certain products in specific places and time periods.
+
 2. How many cuboids are there in a 3-dimensional cube with 2,4 and 5 levels on its first, second and third dimension correspondingly?
+
+(2 + 1)(4 + 1)(5 + 1) 
+= 3 × 5 × 6 
+= 90
+
+There would be 90 cuboids
 
 3. Index the following table on the animal type column with Bitmap index method.
 
