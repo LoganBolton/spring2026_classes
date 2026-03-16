@@ -5,7 +5,7 @@ A datawarehouse is a centralized collection of data from various sources. It can
 
 2. List and explain 3 schemas of data Warehouses.
 
-I'm assuming that by schemas, you are referring to the "three data warehouse models" listed in the notes. The three data warehouse models are enterprise warehouse, data mart, and virtual warehouse. An enterprise warehouse stores integrated data for the whole organization, a data mart stores a smaller subset for a specific department or group of users, and a virtual warehouse provides access through views over operational databases without fully storing all data physically.
+The three types are star schema, snowflake schema, and fact constellation. A star schema has one fact table connected to dimension tables. A snowflake schema is a more normalized version with smaller dimension tables. A fact constellation schema has multiple fact tables that share dimension tables.
 
 # Q2
 
@@ -19,7 +19,7 @@ Some typical OLAP operations would be things like summarizing data, looking at m
 = 3 × 5 × 6 
 = 90
 
-There would be 90 cuboids
+There would be 90 cuboids total across each dimension.
 
 3. Index the following table on the animal type column with Bitmap index method.
 
