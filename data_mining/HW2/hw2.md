@@ -1,3 +1,5 @@
+# Logan Bolton
+Data Mining - COMP 5130
 ## 1
 
 ### a)
@@ -6,7 +8,9 @@ Write the definition (formula) of the **Minkowski distance measure** and 3 speci
 
 The Minkowski distance measure is a way to measure the length of a path between two points in a multi-dimensional space. 
 
-$d_p(x, y) = \left( \sum_{i=1}^{n} \lvert x_i - y_i \rvert^p \right)^{1/p}, \quad p \ge 1$
+$$
+d_p(x, y) = \left( \sum_{i=1}^{n} \lvert x_i - y_i \rvert^p \right)^{1/p}, \quad p \ge 1
+$$
 
 The three special cases are when p equals to 1 or 2 or p -> infinity. 
 
@@ -86,6 +90,24 @@ Compute χ² (chi-square) calculation for the following table and justify the re
 | Like dogs      | 330 (267) | 300 (362) | 630       |
 | **Sum (col.)** | 450       | 610       | 1060      |
 
+
+```
+(120-182)^2/182 = (-62)^2/182 = 3,844 / 182 ~= 21.12
+
+(310-247)^2/247 = (63)^2/247 = 3,969 / 247 ~= 16.07
+
+(330-267)^2/267 = (63)^2/267 = 3,969 / 267 ~= 14.87
+
+(300-362)^2/362 = (-62)^2/362 = 3,844 / 362 ~= 10.62
+
+21.12 + 16.07 + 14.87 + 10.62 = 62.68
+
+Its a 2x2 table so df = (r-1)(c-1) = (2-1)(2-1) = 1
+
+for df=1, alpha=0.05, the critical value is 3.84.
+Since 62.7 > 3.84, we reject the null hypothesis that they are indepentent.
+```
+
 ---
 
 ### b)
@@ -95,4 +117,23 @@ Compute the covariance matrix of the following vectors:
 ```
 x1 = (2.5, 0.5, 2.2, 1.9, 3.1, 2.3)
 x2 = (2.3, 0.8, 3.0, 2.2, 2.5, 2.8)
+
+x1_mean = (2.5 + 0.5 + 2.2 + 1.9 + 3.1 + 2.3)/6 = 12.5/6 ~= 2.0833
+x2_mean = (2.3 + 0.8 + 3.0 + 2.2 + 2.5 + 2.8)/6 = 13.6/6 ~= 2.2667
+
+d1 = x1 - x1_mean = (0.4167, -1.5833, 0.1167, -0.1833, 1.0167, 0.2167)
+d1^2 ~= 0.1736 + 2.5069 + 0.0136 + 0.0336 + 1.0336 + 0.0469
+
+d2 = x2 - x2_mean = (0.0333, -1.4667, 0.7333, -0.0667, 0.2333, 0.5333)
+d2^2 ~= 0.0011 + 2.1511 + 0.5378 + 0.0044 + 0.0544 + 0.2844
+
+d1 * d2 ~= 0.0139 + 2.3222 + 0.0856 + 0.0122 + 0.2372 + 0.1156 ~= 2.7867
+
+Var(x1) = 3.8083 / 5 ~= 0.7617
+Var(x2) = 3.0333 / 5 ~= 0.6067
+Cov(x1,x2) = 2.7867 / 5 ~= 0.5573
+
+[[0.7617, 0.5573],
+[0.5573, 0.6067]]
+
 ```

@@ -1,11 +1,12 @@
+# Assignment 3 - Logan Bolton
 # Q1
 1. What is a Data Warehouse? Please list 3 kind of applications of the Data Warehouse method
 
-A datawarehouse is a centralized collection of data from various sources. It can be used for things like creating dashboards that describe the current state of a business, analyzing the behaviors of customers or forceasting future trends of what the business related data could look like.
+A data warehouse is a centralized collection of data from various sources. It can be used for things like creating dashboards that describe the current state of a business, analyzing the behaviors of customers or forceasting future trends of what the business related data could look like.
 
 2. List and explain 3 schemas of data Warehouses.
 
-The three types are star schema, snowflake schema, and fact constellation. A star schema has one fact table connected to dimension tables. A snowflake schema is a more normalized version with smaller dimension tables. A fact constellation schema has multiple fact tables that share dimension tables.
+The three types are star schema, snowflake schema, and fact constellation schema. A star schema has one fact table connected to dimension tables. A snowflake schema is a more normalized version with smaller dimension tables. A fact constellation schema has multiple fact tables that share dimension tables.
 
 # Q2
 
@@ -23,10 +24,23 @@ There would be 90 cuboids total across each dimension.
 
 3. Index the following table on the animal type column with Bitmap index method.
 
+| Animal Type | Bitmap |
+| ----------- | ------ |
+| Cat         | 10001  |
+| Hamster     | 01000  |
+| Dog         | 00110  |
+
+
 4. What are the drawbacks of the Bitmap index method?
+
+The bitmap index method can take up a lot of space when a column has many different values. It can also be slower or harder to maintain when the table is updated frequently.
 
 # Q3
 
 Suppose that a data warehouse consists of the three dimensions: time, doctor, and patient, and the two measures: count and charge, where charge is the fee that a doctor charges a patient for a visit.
 
 1.  Draw a schema diagram for the above data warehouse using a schema of your choice. You must name your choice.
+
+![diagram](diagram.png)
+
+I used the star schema.
