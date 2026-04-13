@@ -1,0 +1,19 @@
+# Large data/model files
+*.vec
+*.zip
+*.bin
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.tar.gz
+*.tar
+*.gz
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
